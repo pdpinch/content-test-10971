@@ -1,0 +1,16 @@
+<problem markdown="null">
+<script type="loncapa/python">
+divisor = random.randint(1, 10)
+
+def test_divisible(expect, ans):
+    try:
+        ans=int(ans)
+        return ans % int(expect) == 0
+    except ValueError:
+        return False
+</script>
+<p>Enter an integer divisible by $divisor. </p>
+<customresponse cfn="test_divisible" expect="$divisor">
+    <textline size="10"/>
+</customresponse>
+</problem>
